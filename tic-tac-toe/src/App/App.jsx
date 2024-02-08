@@ -1,12 +1,14 @@
 // Importing necessary components and constants
 import { useState } from "react";
+import "../App/App.scss";
 import GameBoard from "../components/GameBoard/GameBoard";
 import Log from "../components/Log/Log";
 import Player from "../components/Player/Player";
-import { WINNING_COMBINATIONS } from "./winning-combinations";
+import { WINNING_COMBINATIONS } from "../Winning-combinations";
 import { GameOver } from "../components/GameOver/GameOver";
-import { PLAYERS } from "./PlayersSynbol";
-import { INITIAL_GAME_BOARD } from "./InitialGameBoard"; 
+import { PLAYERS } from "../PlayersSynbol";
+import { INITIAL_GAME_BOARD } from "../InitialGameBoard"; 
+import Header from "../components/Header/Header";
 
 // Function to determine the active player based on the game turns
 const deriveActivePlayer = (gameTurns) => {
@@ -85,6 +87,7 @@ const App = () => {
     return (
         <main>
             <div id="game-container">
+                <Header/>
                 <ol id="players" className="highlight-player">
                     <Player
                         initialName={PLAYERS.X}

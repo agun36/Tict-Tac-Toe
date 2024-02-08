@@ -1,3 +1,5 @@
+import '../GameOver/GameOver.scss';
+
 export const GameOver = ({winner, onRestart}) => {
     return (
       <section id="game-over">

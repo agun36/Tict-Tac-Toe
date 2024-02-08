@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Player.scss";
 export default function Player({ initialName, symbol, isActive, onChangeName }) {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
